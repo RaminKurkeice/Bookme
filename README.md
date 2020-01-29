@@ -1,2 +1,2 @@
 # Bookme
-The official Bookeme repository  
+The official Bookme repository  
