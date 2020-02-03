@@ -17,8 +17,7 @@ body{
 
 .logo {
 	float: left;
-	font-family: "melvetica";
-	font-size: 20px;
+	text-align: bottom;
 }
 
 a {
@@ -29,7 +28,7 @@ a {
 li {
 	list-style: none;
 	float: left;
-	margin-left: 15px;
+	margin-left: 10px;
 	padding-Top: 15px;
 
 }
@@ -41,6 +40,19 @@ li {
 }
 
 .img1 {
-	padding-top: 110px;
+	padding-top: 170px;
 
+}
+.firstpara {
+	padding-top: 190px;
+	
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
 }
