@@ -9,6 +9,8 @@
 .logo {
 	float: left;
 	text-align: bottom;
+	margin-top: 6px;
+	margin-bottom: 4px;
 }
 
 .nav {
