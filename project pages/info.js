@@ -5,22 +5,23 @@ function init() {
 	initFAQ();
 }
 
-var faqs = document.getElementsByClassName("faq");
-
 function initFAQ() {
-	for (let i = 0; i < faqs.length; i++) {
-		var toggle = faqs[i].getElementsByClassName("showToggle")[0];
+	
+	$(".faq").each(function(i) {
+		let faqId = "faq"+i
 		
-		faqs[i].setAttribute("id", "faq" + i)
-		setInfoToggle(faqs[i].id, false);
-		toggle.onclick = function() {toggleInfoToggle(faqs[i].id);};
-	}
+		$(this).attr("id", faqId);
+		setInfoToggle(this.id, false);
+		$(this).children(".showToggle").click(function() {
+			toggleInfoToggle(faqId);
+		});
+	});
 }
 
 function toggleInfoToggle(faqId) {
-	var faq = document.getElementById(faqId);
+	let faq = "#" + faqId
 	
-	if (faq.getAttribute("isVisible") == "true") {
+	if ($(faq).attr("isVisible") == "true") {
 		setInfoToggle(faqId, false);
 	}
 	else {
@@ -29,18 +30,16 @@ function toggleInfoToggle(faqId) {
 }
 
 function setInfoToggle(faqId, visible) {
-	var faq = document.getElementById(faqId);
-	var answer = faq.getElementsByClassName("answer")[0];
-	var toggle = faq.getElementsByClassName("showToggle")[0];
+	let faq = "#" + faqId
 	
 	if (visible) {
-		faq.setAttribute("isVisible", "true");
-		answer.style.display = "block";
-		toggle.innerHTML = "˄ Hide Answer";
+		$(faq).attr("isVisible", "true");
+		$(faq).children(".answer").show();
+		$(faq).children(".showToggle").html("˄ Hide Answer");
 	}
 	else {
-		faq.setAttribute("isVisible", "false");
-		answer.style.display = "none";
-		toggle.innerHTML = "˅ Show Answer";
+		$(faq).attr("isVisible", "false");
+		$(faq).children(".answer").hide();
+		$(faq).children(".showToggle").html("˅ Show Answer");
 	}
 }
