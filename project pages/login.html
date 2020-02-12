@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+	         <script src="login.js">  </script>
+			 <link rel="stylesheet" href="css-styles.css"/>
+</head>
+<body>
+<div class="container">
+  <h2>Registration</h2>
+  <form action="" name="registration">
+
+    <label for="firstname">First Name</label>
+    <input type="text" name="firstname" id="firstname" placeholder="John"/>
+	<label class="error" for="firstname" id="fname_error">This field is required.</label>
+
+    <label for="lastname">Last Name</label>
+    <input type="text" name="lastname" id="lastname" placeholder="Doe"/>
+	<label class="error" for="lastname" id="lname_error">This field is required.</label>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="john@doe.com"/>
+	<label class="error" for="email" id="email_error">This field is required.</label>
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;"/>
+	<label class="error" for="password" id="password_error">This field is required.</label>
+    <button type="submit" id="submit">Register</button>
+
+  </form>
+</div>
+</body>
+</html>
