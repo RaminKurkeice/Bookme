@@ -35,8 +35,8 @@ body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 	</style>
-      
-       
+      <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+       <script src="feedback.js">  </script>
         </head>
   <body >
       <div class="container">
@@ -79,13 +79,20 @@ body {
                 <div class="col-sm-6 form-group">
                     <label for="name">
                         Your Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Ahmad El-Hajj" required>
+					<label class="error" for="name" id="name_error">This field is required.</label>
                 </div>
                 <div class="col-sm-6 form-group">
+                    <label for="phone">
+                        Telephone:</label>
+                    <input type="phone" class="form-control" id="phone" name="phone" placeholder="647-999-9646" required>
+                </div>
+				 <div class="col-sm-6 form-group">
                     <label for="email">
                         Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="something@gmail.com" required>
                 </div>
+				
             </div>
             
                         <div class="row">
