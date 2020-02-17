@@ -39,6 +39,7 @@ body {
        <script src="feedback.js">  </script>
         </head>
   <body >
+  
       <div class="container">
         <div class="imagebg"></div>
 <div class="row " style="margin-top: 50px">
@@ -68,20 +69,42 @@ body {
                 </p>
                 </div>
             </div>  
+			
             <div class="row">
                 <div class="col-sm-12 form-group">
-                    <label for="comments">
-                        Comments:</label>
+                    <label for="Like">
+                        What did you like?</label>
                     <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
+                </div>
+            </div>
+			<div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="Improve">
+                        What needs to be improved?</label>
+                    <textarea class="form-control" type="textarea" name="improve" id="improve" placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
+                </div>
+            </div>
+			<div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="What did you Like?">
+                        How often do you use this site?</label>
+                 <input type="text" class="form-control" id="often" name="often"  required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 form-group">
-                    <label for="name">
-                        Your Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Ahmad El-Hajj" required>
-					<label class="error" for="name" id="name_error">This field is required.</label>
+                    <label for="firstName">
+                        First Name:</label>
+                    <input type="text" class="form-control" id="firstName" name="name" placeholder="Ahmad " required>
+				
                 </div>
+				<div class="col-sm-6 form-group">
+                    <label for="lastName">
+                        Last Name:</label>
+                    <input type="text" class="form-control" id="lastName" name="name" placeholder="El-Hajj" required>
+					
+                </div>
+				
                 <div class="col-sm-6 form-group">
                     <label for="phone">
                         Telephone:</label>
@@ -97,7 +120,7 @@ body {
             
                         <div class="row">
                 <div class="col-sm-12 form-group">
-                    <button type="submit" class="btn btn-lg btn-warning btn-block" >Post </button>
+                    <button type="submit"  id="submit" class="btn btn-lg btn-warning btn-block" >Post </button>
                 </div>
             </div>
 
@@ -115,6 +138,6 @@ body {
 </div>
       </div>
       
-      
+      </form>
   </body>
 </html>

@@ -1,5 +1,6 @@
 $(document).ready(init);
 function init(){
+	
 	$(".error").hide();
 	
 	$("#submit").click(validate);
@@ -7,29 +8,43 @@ function init(){
 
 
 function validate(event){
-	$(".error").hide();
-	var hasNumber = /\d/;
-	$("input#name_error").hide();
-	var name = $("input#name").val();
 	
-	if(name = ""){
-		$("input#name_error").show();
-		$("input#name").focus();
-		return false;
-	}
-	else if (hasNumber.test("name")){
-		$("label#name_error").show();
-		$("input#name").focus();
-		return false;
-	}
-	var email = $("input#email").val();
-	if (email == ""){ 
-		$("label#email_error").show();
-		$("input#email").focus();
-		return false;
+	alert("Validating");
+	
+	var succes = false;
+	var firstName= $('#firstName').val();
+	var LastName= $('#LastName').val();
+	var tele= $('#phone').val();
+	var email= $('#Email').val();
+	var letters = /^[A-Za-z]+$/;
+	
+	if(firstName.value.match(letters))
+     {
+		 alert("true");
+		succes = true;
+     }
+	 else {
+		succes = false;
+		alert("false");
+	 }
+	 if (LastName.value.match(letters))
+     {
+		 alert("hello no numbers");
+		succes = true;
+		alert("true");
+     }else{
+		 succes = false;
+		alert("true");
 	}
 	
-	var dataString = 'name='+ name  +'&email=' + email ;
-	alert(dataString);
-	return false;
+	
+	if (succes == true ){
+            $('form#reused_form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+        
+		alert(succes);
+  }
 }
+  
+
