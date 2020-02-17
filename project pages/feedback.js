@@ -17,8 +17,8 @@ function validate(event){
 	var tele= $('#phone').val();
 	var email= $('#Email').val();
 	var letters = /^[A-Za-z]+$/;
-	
-	if(firstName.value.match(letters))
+	var hasNumber = /\d/;
+	if(letters.test(firstName))
      {
 		 alert("true");
 		succes = true;
@@ -27,7 +27,7 @@ function validate(event){
 		succes = false;
 		alert("false");
 	 }
-	 if (LastName.value.match(letters))
+	 if (letters.test(lastName))
      {
 		 alert("hello no numbers");
 		succes = true;
