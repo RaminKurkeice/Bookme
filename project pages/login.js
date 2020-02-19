@@ -44,7 +44,7 @@ function validate(event){
 		$("input#password").focus();
 		return false;
 	}
-	else if(password.length >= 8 && /[a-z]/.test(password) || /[A-Z]/.test(password) && /\d/.test(password) && /[^\w\s]/.test(password)){
+	else if(password.length <= 8 && /[a-z]/.test(password) || /[A-Z]/.test(password) && /\d/.test(password) && /[^\w\s]/.test(password)){
 		$("label#password_error").show();
 		$("input#password").focus();
 		return false;

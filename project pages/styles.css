@@ -1,5 +1,5 @@
 /* Header */
-.header {
+.header{
 	background: #c46200;
 	width: 100%;
 	top: 0;
@@ -15,6 +15,8 @@
 
 .nav {
 	float: right;
+
+
 }
 
 a {
@@ -39,6 +41,19 @@ body{
 .container{
 	width: 960px;
 	margin: 0 auto;
+}
+
+.img1 {
+	padding-top: 170px;
+
+}
+.pushed {
+	padding-Top: 170px;
+	
+}
+.firstpara {
+	padding-top: 190px;
+	
 }
 
 .row {

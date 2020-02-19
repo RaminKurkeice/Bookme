@@ -11,7 +11,7 @@ images[3] = 'textbooks.jpg';
 
 // change images
 function changeImg(){
-	document.slide.src = images[i];
+document.slide.src = images[i];
 
 if(i < images.length - 1){
 	
@@ -27,14 +27,9 @@ setTimeout("changeImg()", time);
 
 }
 
-function init() {
-	initHeader();
-	changeImg();
-}
-
 function search(){
 
 
 }
 
-window.onload = init;
+window.onload = changeImg;
