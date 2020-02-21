@@ -18,23 +18,25 @@ function validate(event){
 	var email= $('#Email').val();
 	var letters = /^[A-Za-z]+$/;
 	var hasNumber = /\d/;
-	if(letters.test(firstName))
+	if(firstName == letters.test(firstName))
      {
 		 alert("true");
 		succes = true;
      }
-	 else {
+	 else if () {
 		succes = false;
 		alert("false");
+		break;
 	 }
-	 if (letters.test(lastName))
+	 if (lastName == letters.test(lastName))
      {
-		 alert("hello no numbers");
+		
 		succes = true;
 		alert("true");
      }else{
 		 succes = false;
-		alert("true");
+		alert("false");
+		break;
 	}
 	
 	
@@ -45,6 +47,7 @@ function validate(event){
         
 		alert(succes);
   }
+
 }
   
 
