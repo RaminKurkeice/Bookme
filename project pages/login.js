@@ -8,22 +8,20 @@ function init(){
 
 
 function validate(event){
-	
-	$(".error").hide();
-	
 	var password = $("input#password").val();
 	var email = $("input#email").val();
 	var fname = $("input#firstname").val();
 	var lname = $("input#lastname").val();
 	
+	$(".error").hide();
 	
-	if (fname == "" || fname == /[0-9]/.test("fname")){
+	if (fname == "" || !/^[a-zA-Z]+$/.test(fname)){
 		$("label#fname_error").show();
 		$("input#firstname").focus();
 		return false;
 	}
 	
-	else if (lname == "" || lname == /[0-9]/.test("lname")){
+	else if (lname == "" || !/^[a-zA-Z]+$/.test(lname)){
 		$("label#lname_error").show();
 		$("input#lastname").focus();
 		return false;
@@ -34,7 +32,7 @@ function validate(event){
 		$("input#email").focus();
 		return false;
 	}
-	else if (password == "" || password.length <= 8 || password != /[a-z]/.test(password) || password == /[^\w\s]/.test(password) || password != /[0-9]/.test(password)){
+	else if (password.length < 8 || !/[a-zA-Z]/.test(password) || !/[0-9]/.test(password) || !/[ !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/.test(password) || /[^a-zA-Z0-9 !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/.test(password)){
 		$("label#password_error").show();
 		$("input#password").focus();
 		return false;

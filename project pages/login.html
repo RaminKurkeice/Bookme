@@ -12,11 +12,11 @@
 
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname" placeholder="firstname"/>
-	<label class="error" for="firstname" id="fname_error">no numbers</label>
+	<label class="error" for="firstname" id="fname_error">no numbers allowed</label>
 
     <label for="lastname">Last Name</label>
     <input type="text" name="lastname" id="lastname" placeholder="lastname"/>
-	<label class="error" for="lastname" id="lname_error">no numbers</label>
+	<label class="error" for="lastname" id="lname_error">no numbers allowed</label>
 	
 	<label for="username">username</label>
     <input type="text" name="username" id="username" placeholder="username" required/>
@@ -28,7 +28,7 @@
 
     <label for="password">Password</label>
     <input type="password" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" required/>
-	<label class="error" for="password" id="password_error">incorrect password must have 8 or more characters with a letter, number, and no special characters</label>
+	<label class="error" for="password" id="password_error">INVALID PASSWORD<br>Password must:<br> - be at leat 8 characters long<br> - contain a letter<br> - contain a number<br> - contain a special characters</label>
     <button type="submit" id="submit">Register</button>
 
   </form>
