@@ -34,12 +34,13 @@ function setInfoToggle(faqId, visible) {
 	
 	if (visible) {
 		$(faq).attr("isVisible", "true");
-		$(faq).children(".answer").show();
+		$(faq).children(".answer").slideDown();
 		$(faq).children(".showToggle").html("˄ Hide Answer");
 	}
 	else {
 		$(faq).attr("isVisible", "false");
-		$(faq).children(".answer").hide();
+		$(faq).children(".answer").slideUp();
 		$(faq).children(".showToggle").html("˅ Show Answer");
 	}
 }
+
