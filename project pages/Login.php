@@ -8,6 +8,7 @@
 </style>
 </head>
 <body>
+
 <h2>login</h2>
 <?php
 
@@ -33,7 +34,7 @@
 		  } else {
 			$uname = test_input($_POST["uname"]);    }
 		if ( $unameErr ==""&& $PErr ==""){
-			$database=mysqli_connect('localhost','testuser','pass');
+			$database=mysqli_connect('web','Password1','bookme');
 			$hashp=hash('*****',$pass);
 			$sql="SELECT * from account WHERE username ='$username' AND password='$hashp';";
 			$record =mysqli_Query($database,$sql) or die (" Cannot fine account");
@@ -42,5 +43,10 @@
 				$loginErr="Invalid username or password! ";
 			}else{ 
 				header('Location: Bookme MainPage.html');}
-		}}?></html>
+		}}?>
+		<?php
+
+echo "welcome"+ $username."<br/>";
+?>
+</html>
 
