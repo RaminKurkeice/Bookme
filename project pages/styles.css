@@ -15,7 +15,7 @@
 
 .nav {
 	float: right;
-
+	margin-bottom: 10px;
 
 }
 
@@ -44,6 +44,11 @@ body{
 }
 
 .img1 {
+	padding-top: 170px;
+
+}
+
+.form1 {
 	padding-top: 170px;
 
 }
