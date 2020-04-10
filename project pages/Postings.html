@@ -1,0 +1,87 @@
+ <!doctype html>
+ <html>
+ 
+ 
+ <head>
+<meta charsset="utf-8">
+<title>Bookme-Get Used Books</title>
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+
+</head>
+
+
+
+<body lang="en">
+	<div class="header">
+		<div class="container">
+			<div class="logo">
+			<img src="BookmeLogo.png" style="width:25%">	
+			</div>
+
+			<div class="nav">
+				<ul>
+					<li><a href="Postings.html">Postings</a></li>
+					<li><a href="Bookme-MainPage.html">Home</a></li>
+					<li><a href="AboutUs.html">About Us</a></li>
+					<li><a href="feedback.html">Contact</a></li>
+					<li><a href="info.html">Information</a></li>
+					<li><a href="signin.html">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+	<div class="form1">
+	<form method=POST action=Postings.php enctype="multipart/form-data">
+	        <h2>Book Posting Application<h2>
+             <h3>* = required fields</h3>
+
+<font size="+2">Owner</font>
+	<input id="owner" type="email" size="20" name="Owner" placeholder="Your email" required autofocus>
+<html>
+<h2>Book Details</h2>
+</html>
+<font size="+2">Title *</font>
+	<input id="title" type="text" size="50" name="BookTitle" placeholder="Book Title" required>
+<br>
+<font size="+2">Author *</font>  
+	<input id="author" type="text" size="50" name="BookAuthor" style="color:#ccc" placeholder="Author" required>
+<br>
+<font size="+2">Date Published</font>  
+	<input id="date" type="datetime" name="Date" style="color:#ccc" placeholder="Date published">
+	
+<html>
+<h2>Additional Details *</h2>
+</html>
+
+<font size="+2">Description: *</font>
+<br>
+	<textarea id="des"  rows="4" cols="50" name="Description" required></textarea>
+	<br>
+<font size="+2">Price *</font> 
+	<input id="price" type="text" name="Price" required>
+	<br>
+	<font size="+2">Condition *</font>
+	<br>
+  <input type="radio" id="mint" size="20" name="Condition" value="mint" >
+  <label for="mint">mint</label><br>
+  <input type="radio" id="used" size="20" name="Condition" value="used" >
+  <label for="used">used</label><br>
+  <input type="radio" id="poor" size="20" name="Condition" value="poor" >
+  <label for="poor">poor</label>
+
+<br>
+        <input type=submit /> 
+        </form>
+		</div>
+</div>
+
+
+</body>
+
+</html>
