@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML
 <html>
 <head>
@@ -8,7 +7,6 @@
 </style>
 </head>
 <body>
-
 <h2>login</h2>
 <?php
 
