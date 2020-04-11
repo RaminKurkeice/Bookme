@@ -3,7 +3,7 @@ $(document).ready(init);
 function init(){
 	$('.error').hide();
 	$('#submit').click(validate);
-	$('#submit').load("Login.php")
+	$('#submit').load("Login.php");
 	
 }
 
