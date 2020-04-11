@@ -68,7 +68,7 @@
 		$publisher = test_input($_POST["publisher"]);
 		
 		if (empty($_POST["datePublished"])) {
-			$datePublishedError = "Description is required";
+			$datePublished = "NULL";
 		} else {
 			$datePublished = test_input($_POST["datePublished"]); 
 		}
@@ -79,7 +79,7 @@
 			// check if exists in database
 			$dbc=mysqli_connect('localhost','web','Password1','bookme') or die("Could not Connect!\n");
 			$sql="INSERT INTO Listing (owner, price, book_condition, book_title, book_author, book_publisher, book_published, description)
-				VALUES ('$Owner', $price, '$BookCondition', '$Book', '$Author', '$publisher', '$datePublished', '$bookDescription');";	
+				VALUES ('$Owner', $price, '$BookCondition', '$Book', '$Author', '$publisher', $datePublished, '$bookDescription');";	
 			$result =mysqli_Query($dbc,$sql) or die(" Error querying database");
 			
 			$a=mysqli_num_rows($result);
@@ -125,16 +125,16 @@
 	<font size="+2">Book Title:</font> <input type="text" name="Book" value="Book Title"/>
 	<span class="error">* <?php echo $BookErr;?></span>
 	<br/><br/>
-	<font size="+2">Author::</font> <input type="text" name="Author" value="Author"/>
+	<font size="+2">Author:</font> <input type="text" name="Author" value="Author"/>
 	<span class="error">* <?php echo $AuthorErr;?></span>
 	<br/><br/>
     <font size="+2">Publisher:</font> <input type="text" name="publisher" value="Publisher"/>
 	<span class="error">* <?php echo $publisherError;?></span>
 	<br/><br/>
-	<font size="+2">Date of Publiscation:</font> <input type="date" name="datePublished" value="Date of Publiscation"/>
+	<font size="+2">Date of publication:</font> <input type="date" name="datePublished" value="Date of Publiscation"/>
 	<span class="error">* <?php echo $datePublished;?></span>
 	<br/><br/>
-	<font size="+2">Description::</font> <input type="text" name="bookDescription" value="Description"/>
+	<font size="+2">Description:</font> <input type="text" name="bookDescription" value="Description"/>
 	<span class="error">* <?php echo $bookDescriptionError;?></span>
 	<br/><br/>
 	
@@ -154,3 +154,4 @@
 
 </div>
 </html>
+
