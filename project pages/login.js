@@ -40,7 +40,7 @@ function validate(event){
 	}
 	else {
 		window.alert("confirmed redirecting ...");
-		window.open("Bookme-MainPage.html");
+		window.open("Login.php");
 	return true;
 	}
 	
