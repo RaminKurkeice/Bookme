@@ -110,7 +110,7 @@
 
 <div class="container">
 <h2 class="img1">Add Book</h2>
-<form method="post" action="createListings.php"> 
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 	<font size="+2">Owner:</font>  <input type="text" name="Owner" value="Owner"/>
 	<span class="error">* <?php echo $OwnerErr;?></span>
 	<br/><br/>
@@ -144,7 +144,7 @@
 	<input type="submit" name="submit" value="Add Book"/>
 <br/><br/>
 </form>
-<form method="post" action="deleteListings.php">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <h1>Delete Book</h1>
 <font size="+2">Book title to delete:</font> <input type="text" name="DeleteBook" value="Book title"/>
 	<br/><br/>
