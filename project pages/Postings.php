@@ -30,7 +30,8 @@ $decription = $_POST['des'];
 $price = $_POST['price'];
 $condition = $_POST['Condition'];
 
-$sql="INSERT INTO Listings VALUES (null, '$owner', null, '$price', '$condition', '$book_title', '$book_author', null, '$date', '$decription', null, null, null);";
+$sql="INSERT INTO Listings (Owner, Price, Condition, Book_Title, Book_Author, Date, Description) 
+VALUES ('$owner','$price', '$condition', '$book_title', '$book_author', '$date', '$decription');";
 
 echo "Book Posting complete";
 
