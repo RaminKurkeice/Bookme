@@ -56,8 +56,10 @@
 		if ( $unameErr ==""&& $PErr =="" && $FnameErr == ""&& LnameErr==""&& emailErr == ""){
 			$database=mysqli_connect('localhost', 'web', 'Password1', 'bookme');
 			$hashp=hash('*****',$pass);
-			$sql="INSERT INTO account(user,password,firstName,lastName,email)VALUES($uname,$hashp,$firstName,$lastName,$em);";
-			$record =mysqli_Query($database,$sql) or die (" Cannot fine account");
+			$sql="INSERT INTO account (username, salted_hash, salt) VALUES ($uname,$hashp,$salt);";
+			$record =mysqli_Query($database,$sql) or die("Cannot create account");
+			$sql="INSERT INTO account (username, photo_url, first_name, last_name, email) VALUES ($uname,$photoURL,$firstName,$lastName,$em);";
+			$record =mysqli_Query($database,$sql) or die("Cannot create account");
 			$a=mysqli_num_rows($record);
 			if ($a===0){
 				$loginErr="Invalid username or password! ";
