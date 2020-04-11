@@ -3,11 +3,7 @@ $(document).ready(init);
 function init(){
 	$('.error').hide();
 	$('#submit').click(validate);
-	$('#submit').click(function() {
-									location.href = 'Login.php';
-									return false;
-	}
-	
+	$('#submit').load("Login.php")
 	
 }
 
