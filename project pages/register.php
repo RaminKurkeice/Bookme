@@ -54,14 +54,17 @@
 			 
 			
 		if ( $unameErr ==""&& $PErr =="" && $FnameErr == ""&& LnameErr==""&& emailErr == ""){
-			$database=mysqli_connect('localhost','testuser','pass','lastName','firstName','email');
+			$database=mysqli_connect('localhost', 'web', 'Password1', 'bookme');
 			$hashp=hash('*****',$pass);
-			$sql="SELECT * from account WHERE username ='$username' AND password='$hashp'AND FirstName='$firstName'AND LastName='$lastName',AND email='$em';";
+			$sql="INSERT INTO account(user,password,firstName,lastName,email)VALUES($uname,$hashp,$firstName,$lastName,$em);";
 			$record =mysqli_Query($database,$sql) or die (" Cannot fine account");
 			$a=mysqli_num_rows($record);
 			if ($a===0){
 				$loginErr="Invalid username or password! ";
 			}else{ 
 				header('Location: Bookme MainPage.html');}
-		}}?></html>
+		}}
+		
+		echo "welcome"+ $username."<br/>";
+		?></html>
 
