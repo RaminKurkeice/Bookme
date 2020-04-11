@@ -36,6 +36,8 @@
 		if ( $unameErr ==""&& $PErr ==""){
 			$database=mysqli_connect('localhost', 'web', 'Password1', 'bookme');
 			$hashp=hash('*****',$pass);
+			$salt = 'aasdasmdkasmjdsaasd';
+			$pw_hash = md5($salt.$password);
 			$sql="SELECT * from account WHERE username ='$username' AND password='$hashp';";
 			$record =mysqli_Query($database,$sql) or die (" Cannot fine account");
 			$a=mysqli_num_rows($record);
@@ -47,6 +49,8 @@
 		<?php
 
 echo "welcome"+ $username."<br/>";
+mysqli_close($conn); 
+
 ?>
 </html>
 

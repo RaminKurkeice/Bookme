@@ -66,5 +66,7 @@
 		}}
 		
 		echo "welcome"+ $username."<br/>";
+		mysqli_close($conn); 
+
 		?></html>
 
